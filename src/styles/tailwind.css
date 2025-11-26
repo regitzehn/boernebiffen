@@ -6,7 +6,6 @@
 @import "tailwindcss-intersect";
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
   /* COLORS */
   /* PINK */
   --color-pink-100: #e54ccb;
@@ -57,33 +56,79 @@
   --color-neutral-900: #1b1b1b;
 
   /* FONTS */
-  /* FONT FAMILY */
   --font-sans: "museo-sans", sans-serif;
+  --font-display: var(--font-sans);
 
-  /* FONT WEIGHTS */
   --font-weight-normal: 500;
   --font-weight-bold: 700;
   --font-weight-black: 900;
 
-  /* ITALIC */
-  --font-italic: italic;
+  /* TYPOGRAPHY TOKENS */
+  --font-h1: 44px;
+  --font-h2: 40px;
+  --font-h3: 36px;
+  --font-h4: 36px;
+  --font-footer: 24px;
+  --font-p-desktop: 24px;
 }
 
 @layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-neutral-900);
+    background-color: var(--color-neutral-50);
+  }
+
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    /* Optional: tweak or remove */
+    border-color: var(--color-neutral-50, currentColor);
   }
 }
 
 @layer components {
 }
+
 @layer utilities {
-  .font-italic-500 {
-    font-style: italic;
-    font-weight: var(--font-weight-normal);
+  /* Headings */
+  .text-h1 {
+    font-size: var(--font-h1);
+    font-family: var(--font-display);
+    font-weight: 900;
+  }
+
+  .text-h2 {
+    font-size: var(--font-h2);
+    font-family: var(--font-display);
+    font-weight: 900;
+  }
+
+  .text-h3 {
+    font-size: var(--font-h3);
+    font-family: var(--font-display);
+    font-weight: 900;
+  }
+
+  .text-h4 {
+    font-size: var(--font-h4);
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  /* Footer text */
+  .text-footer {
+    font-size: var(--font-footer);
+    font-family: var(--font-display);
+    font-weight: 900;
+  }
+
+  /* Paragraph */
+  .text-p-desktop {
+    font-size: var(--font-p-desktop);
+    font-family: var(--font-display);
+    font-weight: 500;
   }
 }
