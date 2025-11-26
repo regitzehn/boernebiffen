@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -7,6 +7,66 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+  /* COLORS */
+  /* PINK */
+  --color-pink-100: #e54ccb;
+  --color-pink-200: #f197e1;
+  --color-pink-300: #b871ac;
+  --color-pink-400: #aa1891;
+
+  /* GREEN */
+  --color-green-100: #cbeb78;
+  --color-green-200: #6b9400;
+  --color-green-300: #92bd22;
+  --color-green-400: #4e6c00;
+
+  /* BLUE */
+  --color-blue-100: #d2e9ff;
+  --color-blue-200: #1f91ff;
+  --color-blue-300: #91abc4;
+  --color-blue-400: #196cbb;
+
+  /* YELLOW */
+  --color-yellow-100: #ffd87c;
+  --color-yellow-200: #eba400;
+  --color-yellow-300: #d6b465;
+  --color-yellow-400: #a27100;
+
+  /* ORANGE */
+  --color-orange-100: #ffb07c;
+  --color-orange-200: #ff6803;
+  --color-orange-300: #ce8f64;
+  --color-orange-400: #c95000;
+
+  /* VIOLET */
+  --color-violet-100: #cba8ff;
+  --color-violet-200: #7736d9;
+  --color-violet-300: #9b7cc9;
+  --color-violet-400: #512298;
+
+  /* COOLBLUE */
+  --color-coolblue-100: #d2dcff;
+  --color-coolblue-200: #95acfe;
+
+  /* LIME */
+  --color-lime-100: #f0ffc6;
+  --color-lime-200: #cbeb78;
+
+  /* NEUTRALS */
+  --color-neutral-50: #f9f4f2;
+  --color-neutral-900: #1b1b1b;
+
+  /* FONTS */
+  /* FONT FAMILY */
+  --font-sans: "museo-sans", sans-serif;
+
+  /* FONT WEIGHTS */
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* ITALIC */
+  --font-italic: italic;
 }
 
 @layer base {
@@ -19,9 +79,11 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
+  .font-italic-500 {
+    font-style: italic;
+    font-weight: var(--font-weight-normal);
+  }
 }
