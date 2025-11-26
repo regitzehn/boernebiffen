@@ -1,0 +1,26 @@
+<svg width="40" height="65" viewBox="0 0 40 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2.2941" y1="36.3392" x2="6.94483" y2="0.063576" stroke="#1B1B1B"/>
+<line y1="-0.5" x2="38.4185" y2="-0.5" transform="matrix(-0.121054 -0.992646 -0.992646 0.121054 38.1357 38.2631)" stroke="#1B1B1B"/>
+<line x1="30.1955" y1="27.1358" x2="28.3352" y2="0.161563" stroke="#1B1B1B"/>
+<line x1="10.6633" y1="27.067" x2="12.5236" y2="0.092761" stroke="#1B1B1B"/>
+<circle cx="3.2255" cy="37.678" r="3.2255" fill="#0067CE"/>
+<circle cx="21.9339" cy="15.0995" r="10.3216" fill="#1F91FF"/>
+<circle cx="12.2568" cy="27.3564" r="3.2255" fill="#0067CE"/>
+<circle cx="30.3193" cy="27.3564" r="3.2255" fill="#0067CE"/>
+<rect x="12.9023" y="24.1309" width="18.0628" height="19.353" rx="3" fill="#1F91FF"/>
+<rect x="9.73633" y="26.7113" width="5.16081" height="11.3251" rx="2.5804" transform="rotate(39.1898 9.73633 26.7113)" fill="#1F91FF"/>
+<rect x="15.4824" y="40.9035" width="5.16081" height="11.3251" rx="2.5804" fill="#1F91FF"/>
+<rect x="15.4824" y="52.5153" width="5.16081" height="7.74121" rx="2.5804" fill="#1F91FF"/>
+<rect x="24.5137" y="52.5153" width="5.16081" height="7.74121" rx="2.5804" fill="#1F91FF"/>
+<rect x="24.5137" y="40.9035" width="5.16081" height="11.3251" rx="2.5804" fill="#1F91FF"/>
+<rect x="29.6748" y="30.0074" width="5.16081" height="11.3251" rx="2.5804" transform="rotate(-22.8717 29.6748 30.0074)" fill="#1F91FF"/>
+<circle cx="36.7704" cy="40.2584" r="3.2255" fill="#0067CE"/>
+<circle cx="18.0628" cy="12.5191" r="2.5804" fill="#0067CE"/>
+<circle cx="25.804" cy="12.5191" r="2.5804" fill="#0067CE"/>
+<circle cx="21.9329" cy="16.3897" r="2.5804" fill="#0067CE"/>
+<circle cx="27.0941" cy="52.5153" r="2.5804" fill="#0067CE"/>
+<circle cx="18.0628" cy="52.5153" r="2.5804" fill="#0067CE"/>
+<ellipse cx="18.063" cy="61.5467" rx="3.87061" ry="2.5804" fill="#0067CE"/>
+<ellipse cx="27.0942" cy="61.5467" rx="3.87061" ry="2.5804" fill="#0067CE"/>
+<path d="M18.0625 20.2603C18.0625 20.2603 21.9331 23.1632 25.8037 20.2603" stroke="#0067CE" stroke-linecap="round"/>
+</svg>
