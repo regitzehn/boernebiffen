@@ -4,31 +4,52 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
+<MainLayout title="Forside">
+  <article
+    class="max-h-[90vh] bg-lime-200 relative overflow-hidden px-4 md:px-10 grid grid-cols-1 auto-rows-auto md:grid-cols-10 md:grid-rows-7"
+  >
+    <!-- LOGO (includes tagline) -->
+    <img
+      src="/public/logo-bornebiffen.svg"
+      alt="Børnebiffen"
+      class="mt-6 w-3/4 max-w-[260px] z-30 md:mt-0 md:w-full md:max-w-[280px] md:col-start-2 md:col-span-3 md:row-start-1 md:row-span-2 md:self-end"
+    />
 
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link>
-    </p>
+    <!-- BUTTONS UNDER LOGO -->
+    <div
+      class="mt-4 flex gap-4 items-start z-30 md:mt-0 md:pt-4 md:col-start-2 md:col-span-3 md:row-start-3"
+    >
+      <Button color="pink">Log ind</Button>
+      <Button color="white">Opret</Button>
+    </div>
 
-    <lottie-player
-      src="/heroguypurple.json"
-      background="transparent"
-      speed="1"
-      autoplay
-      loop
-      style="width: 200px; height: 200px"
-    ></lottie-player>
-	<lottie-player
-	src="/heroguypink.json"
-	background="transparent"
-	speed="1"
-	autoplay
-	loop
-	style="width: 200px; height: 200px"
-  ></lottie-player>
+    <!-- BIG BLUE/PURPLE LOTTIE -->
+    <div
+      class="mt-8 flex justify-center items-end z-10 md:mt-0 md:col-start-6 md:col-span-5 md:row-start-2 md:row-span-7 md:justify-end"
+    >
+      <lottie-player
+        src="/heroguypurple.json"
+        background="transparent"
+        speed="1"
+        autoplay
+        loop
+        class="w-full max-w-[360px] sm:max-w-[440px] md:max-w-[750px] lg:max-w-[900px]"
+      ></lottie-player>
+    </div>
+
+    <!-- SMALL PINK LOTTIE – hidden on mobile -->
+    <div
+      class="hidden md:flex md:items-end md:z-30 md:col-start-5 md:col-span-2 md:row-start-5 md:row-span-3"
+    >
+      <lottie-player
+        src="/heroguypink.json"
+        background="transparent"
+        speed="1"
+        autoplay
+        loop
+        class="w-[220%] max-w-none h-auto"
+      ></lottie-player>
+    </div>
   </article>
 </MainLayout>
 
