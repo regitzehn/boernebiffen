@@ -1,6 +1,70 @@
 ---
+interface FooterLink {
+  href: string;
+  label: string;
+}
+
+const links: FooterLink[] = [
+  { href: "/om-bornebiffen", label: "Om Børnebiffen" },
+  { href: "/tilgaengelighed", label: "Tilgængelighedserklæring" },
+  { href: "/cookies", label: "Cookies" },
+  { href: "/privatliv", label: "Privatlivspolitik" },
+  { href: "/kontakt", label: "Kontakt os" },
+];
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<footer class="relative bg-green-400 text-neutral-50 overflow-hidden">
+  <div
+    class="
+      max-w-6xl mx-auto px-4 md:px-10 py-10 md:py-12
+      grid gap-10
+      md:grid-cols-[minmax(0,2fr)_minmax(0,2fr)_minmax(0,1.5fr)]
+      items-start
+    "
+  >
+    <!-- LEFT: LOGOS -->
+    <div class="space-y-4">
+      <img src="/logo-bornebiffen.svg" alt="Børnebiffen" class="w-48 max-w-full" />
+      <img src="/filmstriben.svg" alt="Filmstriben" class="w-40 max-w-full" />
+    </div>
+
+    <!-- MIDDLE: LINKS -->
+    <nav class="space-y-3 text-lg">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="block font-bold hover:underline underline-offset-4 decoration-2"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- RIGHT: ADDRESS -->
+    <div class="text-lg font-bold space-y-1 md:text-right">
+      <p>DBC DIGITAL A/S</p>
+      <p>Tempo vej 7-11</p>
+      <p>2750 Ballerup</p>
+    </div>
+  </div>
+
+  <!-- PURPLE LOTTIE IN BOTTOM RIGHT -->
+  <div
+    class="
+      pointer-events-none
+      absolute right-4
+      w-28 h-28
+      -bottom-1
+     md:-bottom-5
+    "
+  >
+    <lottie-player
+      src="/heroguypurple.json"
+      background="transparent"
+      speed="1"
+      autoplay
+      loop
+      class="w-full h-full"
+    ></lottie-player>
+  </div>
+</footer>
