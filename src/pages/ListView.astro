@@ -1,0 +1,118 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Kategorier from "../components/Kategorier.astro";
+---
+
+<MainLayout title="Listview">
+    <section
+    class="mt-8 bg-lime-100 rounded-[32px] px-6 py-8 md:px-10 md:py-10"
+    aria-labelledby="kategori-heading"
+  >
+    <h2 id="kategori-heading" class="text-h2 mb-6">KATEGORI</h2>
+  
+    <div class="space-y-8">
+      <!-- GENRE -->
+      <div>
+        <h3 class="text-h4 mb-4">Genre</h3>
+        <section aria-label="Genre" class="flex flex-wrap gap-4">
+          <button type="button" data-category-tile class="cat-tile cat-alle" aria-pressed="false">
+            <img src="/alle.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+            <span class="font-bold text-p-desktop text-center leading-tight">Alle</span>
+          </button>
+  
+          <button type="button" data-category-tile class="cat-tile cat-venskab" aria-pressed="false">
+            <img src="/venskab.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+            <span class="font-bold text-p-desktop text-center leading-tight">Venskab</span>
+          </button>
+  
+          <button type="button" data-category-tile class="cat-tile cat-dyr" aria-pressed="false">
+            <img src="/dyr.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+            <span class="font-bold text-p-desktop text-center leading-tight">Dyr</span>
+          </button>
+  
+          <button type="button" data-category-tile class="cat-tile cat-eventyr" aria-pressed="false">
+            <img src="/eventyr.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+            <span class="font-bold text-p-desktop text-center leading-tight">Eventyr</span>
+          </button>
+  
+          <button type="button" data-category-tile class="cat-tile cat-sjov" aria-pressed="false">
+            <img src="/sjov.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+            <span class="font-bold text-p-desktop text-center leading-tight">Sjov</span>
+          </button>
+  
+          <button type="button" data-category-tile class="cat-tile cat-verden" aria-pressed="false">
+            <img src="/verden.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+            <span class="font-bold text-p-desktop text-center leading-tight">Verden</span>
+          </button>
+        </section>
+      </div>
+  
+      <!-- ANIMATIONSSTIL + TID -->
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- ANIMATIONSSTIL -->
+        <div>
+          <h3 class="text-h4 mb-4">Animationsstil</h3>
+          <section aria-label="Animationsstil" class="flex flex-wrap gap-4">
+            <button type="button" data-category-tile class="cat-tile cat-tegnet" aria-pressed="false">
+              <img src="/tegnet.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+              <span class="font-bold text-p-desktop text-center leading-tight">Tegnet</span>
+            </button>
+  
+            <button type="button" data-category-tile class="cat-tile cat-stop" aria-pressed="false">
+              <img src="/stopmotion.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+              <span class="font-bold text-p-desktop text-center leading-tight">Stop Motion</span>
+            </button>
+  
+            <button type="button" data-category-tile class="cat-tile cat-realfilm" aria-pressed="false">
+              <img src="/realfilm.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+              <span class="font-bold text-p-desktop text-center leading-tight">Realfilm</span>
+            </button>
+          </section>
+        </div>
+  
+        <!-- TID -->
+        <div>
+          <h3 class="text-h4 mb-4">Tid</h3>
+          <section aria-label="Tid" class="flex flex-wrap gap-5">
+            <button type="button" data-category-tile class="cat-tile cat-3-5" aria-pressed="false">
+              <img src="/3-5.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+              <span class="font-bold text-p-desktop text-center leading-tight">3-5 min</span>
+            </button>
+  
+            <button type="button" data-category-tile class="cat-tile cat-5-15" aria-pressed="false">
+              <img src="/5-15.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+              <span class="font-bold text-p-desktop text-center leading-tight">5-15 min</span>
+            </button>
+  
+            <button type="button" data-category-tile class="cat-tile cat-20" aria-pressed="false">
+              <img src="/20.svg" alt="" class="w-10 h-10 md:w-12 md:h-12" />
+              <span class="font-bold text-p-desktop text-center leading-tight">20+ min</span>
+            </button>
+          </section>
+        </div>
+      </div>
+    </div>
+  
+    <!-- FIND BUTTON -->
+    <div class="mt-8 flex justify-center">
+      <button
+        class="px-10 py-3 rounded-full bg-pink-100 text-neutral-900 font-bold shadow-md"
+      >
+        FIND
+      </button>
+    </div>
+  </section>
+</MainLayout>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tiles = document.querySelectorAll("[data-category-tile]");
+  
+      tiles.forEach((tile) => {
+        tile.addEventListener("click", () => {
+          const isActive = tile.classList.toggle("is-active");
+          tile.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+      });
+    });
+  </script>
