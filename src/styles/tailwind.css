@@ -90,6 +90,99 @@
 }
 
 @layer components {
+  .cat-tile {
+    @apply flex flex-col items-center justify-center gap-2
+           w-26 h-26 md:w-26 md:h-26
+           rounded-2xl shadow-md cursor-pointer
+           transition-colors duration-150;
+  }
+
+  /* GENRE COLORS */
+  .cat-alle {
+    @apply bg-green-100;
+  }
+  .cat-alle.is-active {
+    @apply bg-green-300;
+  }
+
+  .cat-venskab {
+    @apply bg-pink-200;
+  }
+  .cat-venskab.is-active {
+    @apply bg-pink-300;
+  }
+
+  .cat-dyr {
+    @apply bg-blue-100;
+  }
+  .cat-dyr.is-active {
+    @apply bg-blue-300;
+  }
+
+  .cat-eventyr {
+    @apply bg-yellow-100;
+  }
+  .cat-eventyr.is-active {
+    @apply bg-yellow-300;
+  }
+
+  .cat-sjov {
+    @apply bg-orange-100;
+  }
+  .cat-sjov.is-active {
+    @apply bg-orange-300;
+  }
+
+  .cat-verden {
+    @apply bg-violet-100;
+  }
+  .cat-verden.is-active {
+    @apply bg-violet-300;
+  }
+
+  /* ANIMATIONSSTIL */
+  .cat-tegnet {
+    @apply bg-yellow-100;
+  }
+  .cat-tegnet.is-active {
+    @apply bg-yellow-300;
+  }
+
+  .cat-stop {
+    @apply bg-blue-100;
+  }
+  .cat-stop.is-active {
+    @apply bg-blue-300;
+  }
+
+  .cat-realfilm {
+    @apply bg-orange-100;
+  }
+  .cat-realfilm.is-active {
+    @apply bg-orange-300;
+  }
+
+  /* TID */
+  .cat-3-5 {
+    @apply bg-green-100;
+  }
+  .cat-3-5.is-active {
+    @apply bg-green-300;
+  }
+
+  .cat-5-15 {
+    @apply bg-pink-200;
+  }
+  .cat-5-15.is-active {
+    @apply bg-pink-300;
+  }
+
+  .cat-20 {
+    @apply bg-blue-100;
+  }
+  .cat-20.is-active {
+    @apply bg-blue-300;
+  }
 }
 
 @layer utilities {
