@@ -3,8 +3,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/tailwind.css';
 
-const { title } = Astro.props;
-const { hideHeader = false } = Astro.props;
+const { title, hideHeader = false, noMargin = false } = Astro.props;
+
 ---
 <html lang="en">
 	<head>
@@ -24,9 +24,9 @@ const { hideHeader = false } = Astro.props;
 			</header>
 		)}
 
-		<main class="ml-6 mr-6 md:ml-40 md:mr-40">
-			<slot />
-		</main>
+		  <main class={noMargin ? "" : "ml-6 mr-6 md:ml-40 md:mr-40"}>
+            <slot />
+        </main>
 
 		<footer>
 			<Footer />
