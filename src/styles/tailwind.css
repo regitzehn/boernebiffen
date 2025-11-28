@@ -72,10 +72,14 @@
   --font-footer: 24px;
   --font-p-desktop: 24px;
 
+  /* CARD TYPOGRAPHY */
+  --font-h-card: 30px;
+  --font-p-card: 24px;
+
   /* RADIUS TOKENS */
-  --radius-sm: 8px; /* small corners, e.g. inputs */
-  --radius-md: 16px; /* medium */
-  --radius-lg: 24px; /* big rounded cards */
+  --radius-sm: 4px; /* small corners, e.g. inputs */
+  --radius-md: 8px; /* medium */
+  --radius-lg: 10px; /* big rounded cards */
   --radius-full: 999px; /* pills & circles */
 }
 
@@ -234,6 +238,19 @@
     font-weight: 700;
   }
 
+  .text-h-card {
+    font-size: var(--font-h-card);
+    font-family: var(--font-display);
+    font-weight: 900;
+  }
+
+  /* Card paragraph */
+  .text-p-card {
+    font-size: var(--font-p-card);
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+
   /* Footer text */
   .text-footer {
     font-size: var(--font-footer);
@@ -246,5 +263,14 @@
     font-size: var(--font-p-desktop);
     font-family: var(--font-display);
     font-weight: 500;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE + Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
 }
