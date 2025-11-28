@@ -71,6 +71,12 @@
   --font-h4: 36px;
   --font-footer: 24px;
   --font-p-desktop: 24px;
+
+  /* RADIUS TOKENS */
+  --radius-sm: 8px; /* small corners, e.g. inputs */
+  --radius-md: 16px; /* medium */
+  --radius-lg: 24px; /* big rounded cards */
+  --radius-full: 999px; /* pills & circles */
 }
 
 @layer base {
@@ -91,9 +97,16 @@
 }
 
 @layer components {
+  .rounded-card {
+    border-radius: var(--radius-lg);
+  }
+
+  .rounded-pill {
+    border-radius: var(--radius-full);
+  }
   .icon-circle {
     @apply inline-flex items-center justify-center
-           w-10 h-10 md:w-12 md:h-12
+           w-10 h-10 md:w-14 md:h-14 
            bg-lime-300 rounded-full shadow-md
            hover:brightness-105
            focus-visible:outline-none
