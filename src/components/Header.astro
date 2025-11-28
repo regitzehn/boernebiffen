@@ -1,5 +1,47 @@
 ---
+interface HeaderIcon {
+  href: string;
+  label: string; // for aria-label
+  icon: string;
+}
+
+const icons: HeaderIcon[] = [
+  { href: "/profil",    label: "Min profil",  icon: "/avatar-icon.svg" },
+  { href: "/favoritter", label: "Favoritter", icon: "/heart-icon.svg" },
+  { href: "/soeg",      label: "Søg",         icon: "/soog-icon.svg" },
+  { href: "/downloads", label: "Downloads",   icon: "/download-icon.svg" },
+];
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header class="bg-neutral-50">
+  <div
+    class="max-w-6xl mx-auto px-4 md:px-10 py-4 md:py-6
+           flex items-center justify-between gap-4"
+  >
+    <!-- LOGO -->
+    <a href="/" class="inline-flex items-start gap-2">
+      <img
+        src="/logo-bornebiffen.svg"
+        alt="Børnebiffen – Se kortfilm med de yngste"
+        class="h-10 md:h-12 w-auto"
+      />
+    </a>
+
+    <!-- ICON NAV -->
+    <nav class="flex items-center gap-3 md:gap-4" aria-label="Primær navigation">
+      {icons.map((item) => (
+        <a
+          href={item.href}
+          aria-label={item.label}
+          class="icon-circle"
+        >
+          <img
+            src={item.icon}
+            alt=""
+            class="w-5 h-5 md:w-6 md:h-6"
+          />
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

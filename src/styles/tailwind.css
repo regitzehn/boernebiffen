@@ -50,6 +50,7 @@
   /* LIME */
   --color-lime-100: #f0ffc6;
   --color-lime-200: #cbeb78;
+  --color-lime-300: #bbe74a;
 
   /* NEUTRALS */
   --color-neutral-50: #f9f4f2;
@@ -90,6 +91,15 @@
 }
 
 @layer components {
+  .icon-circle {
+    @apply inline-flex items-center justify-center
+           w-10 h-10 md:w-12 md:h-12
+           bg-lime-300 rounded-full shadow-md
+           hover:brightness-105
+           focus-visible:outline-none
+           focus-visible:ring-2 focus-visible:ring-pink-200
+           transition;
+  }
   .cat-tile {
     @apply flex flex-col items-center justify-center gap-2
            w-26 h-26 md:w-26 md:h-26
