@@ -1,0 +1,44 @@
+---
+interface Props {
+  size?: "sm" | "md" | "lg";   // optional size variants
+  href?: string;               // optional link wrapper
+  ariaLabel?: string;
+}
+
+const { size = "lg", href = "#", ariaLabel = "Afspil video" } = Astro.props;
+
+const sizeClasses = {
+  sm: "w-14 h-14",   // 56px
+  md: "w-20 h-20",   // 80px
+  lg: "w-28 h-28",   // 112px (your design)
+};
+---
+
+{href ? (
+  <a
+    href={href}
+    aria-label={ariaLabel}
+    class={`rounded-full bg-pink-100 flex items-center justify-center shadow-lg pl-3
+            transition-transform hover:scale-105
+            ${sizeClasses[size]}`}
+  >
+    <img
+      src="/play.svg"
+      alt=""
+      class="w-14 h-14 opacity-80"
+    />
+  </a>
+) : (
+  <button
+    aria-label={ariaLabel}
+    class={`rounded-full bg-pink-100 flex items-center justify-center shadow-lg
+            transition-transform hover:scale-105
+            ${sizeClasses[size]}`}
+  >
+    <img
+      src="/play.svg"
+      alt=""
+      class="w-1/2 h-1/2 opacity-80"
+    />
+  </button>
+)}

@@ -1,11 +1,28 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Kategorier from "../components/Kategorier.astro";
+import PlayButton from "../components/PlayButton.astro";
 ---
 
 <MainLayout title="Listview">
  <section class="mb-6">
-    <img src="/lillefinger.webp" alt="Lillefinger" class="w-full rounded-[16px] object-cover border-coolblue-200 border-6" />
+    <div class="relative">
+        <img src="/lillefinger.webp" alt="Lillefinger" class="w-full rounded-[16px] object-cover border-coolblue-200 border-6" />
+      
+        <div class="absolute bottom-8 right-8">
+
+            <!-- MOBILE: small play button -->
+            <div class="block md:hidden">
+              <PlayButton size="md" />
+            </div>
+          
+            <!-- DESKTOP: large play button -->
+            <div class="hidden md:block">
+              <PlayButton size="lg" />
+            </div>
+          
+          </div>
+    
   </section>
   
     <section
