@@ -29,219 +29,219 @@ import FilmCard from "../components/FilmCard.astro";
     </div>
   </section>
 
-<!-- KATEGORIER -->
-<section
-  class="section-space  bg-lime-100 rounded-[32px]
-         px-4 py-6 sm:px-6 sm:py-8 md:px-20 md:py-10"
-  aria-labelledby="kategori-heading"
->
-  <h2 id="kategori-heading" class="text-h2 mb-6">KATEGORI</h2>
+  <!-- KATEGORIER -->
+  <section
+    class="section-space bg-lime-100 rounded-[32px]
+           px-4 py-6 sm:px-6 sm:py-8 md:px-20 md:py-10"
+    aria-labelledby="kategori-heading"
+  >
+    <h2 id="kategori-heading" class="text-h2 mb-6">KATEGORI</h2>
 
-  <div class="space-y-8">
-    <!-- GENRE -->
-    <div>
-      <h3 class="text-h4 mb-4">Genre</h3>
-
-      <section
-        aria-label="Genre"
-        class="flex flex-wrap gap-3 md:gap-4 justify-start"
-      >
-        <button
-          type="button"
-          data-category-tile
-          class="cat-tile cat-alle w-20 h-20 md:w-26 md:h-26"
-          aria-pressed="false"
-        >
-          <img src="/alle.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-          <span class="font-bold text-p text-center leading-tight">
-            Alle
-          </span>
-        </button>
-
-        <button
-          type="button"
-          data-category-tile
-          class="cat-tile cat-venskab w-20 h-20 md:w-26 md:h-26"
-          aria-pressed="false"
-        >
-          <img src="/venskab.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-          <span class="font-bold text-p text-center leading-tight">
-            Venskab
-          </span>
-        </button>
-
-        <button
-          type="button"
-          data-category-tile
-          class="cat-tile cat-dyr w-20 h-20 md:w-26 md:h-26"
-          aria-pressed="false"
-        >
-          <img src="/dyr.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-          <span class="font-bold text-p text-center leading-tight">
-            Dyr
-          </span>
-        </button>
-
-        <button
-          type="button"
-          data-category-tile
-          class="cat-tile cat-eventyr w-20 h-20 md:w-26 md:h-26"
-          aria-pressed="false"
-        >
-          <img src="/eventyr.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-          <span class="font-bold text-p text-center leading-tight">
-            Eventyr
-          </span>
-        </button>
-
-        <button
-          type="button"
-          data-category-tile
-          class="cat-tile cat-sjov w-20 h-20 md:w-26 md:h-26"
-          aria-pressed="false"
-        >
-          <img src="/sjov.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-          <span class="font-bold text-p text-center leading-tight">
-            Sjov
-          </span>
-        </button>
-
-        <button
-          type="button"
-          data-category-tile
-          class="cat-tile cat-verden w-20 h-20 md:w-26 md:h-26"
-          aria-pressed="false"
-        >
-          <img src="/verden.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-          <span class="font-bold text-p text-center leading-tight">
-            Verden
-          </span>
-        </button>
-      </section>
-    </div>
-
-    <!-- ANIMATIONSSTIL + TID -->
-    <div class="grid gap-8 md:grid-cols-2">
-      <!-- ANIMATIONSSTIL -->
+    <div class="space-y-8">
+      <!-- GENRE -->
       <div>
-        <h3 class="text-h4 mb-4">Animationsstil</h3>
+        <h3 class="text-h4 mb-4">Genre</h3>
+
         <section
-          aria-label="Animationsstil"
+          aria-label="Genre"
           class="flex flex-wrap gap-3 md:gap-4 justify-start"
         >
           <button
             type="button"
             data-category-tile
-            class="cat-tile cat-tegnet w-20 h-20 md:w-26 md:h-26"
+            class="cat-tile cat-alle w-20 h-20 md:w-26 md:h-26"
             aria-pressed="false"
           >
-            <img src="/tegnet.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+            <img src="/alle.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
             <span class="font-bold text-p text-center leading-tight">
-              Tegnet
+              Alle
             </span>
           </button>
 
           <button
             type="button"
             data-category-tile
-            class="cat-tile cat-stop w-20 h-20 md:w-26 md:h-26"
+            class="cat-tile cat-venskab w-20 h-20 md:w-26 md:h-26"
             aria-pressed="false"
           >
-            <img
-              src="/stopmotion.svg"
-              alt=""
-              class="w-8 h-8 md:w-12 md:h-12"
-            />
+            <img src="/venskab.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
             <span class="font-bold text-p text-center leading-tight">
-              Stop Motion
+              Venskab
             </span>
           </button>
 
           <button
             type="button"
             data-category-tile
-            class="cat-tile cat-realfilm w-20 h-20 md:w-26 md:h-26"
+            class="cat-tile cat-dyr w-20 h-20 md:w-26 md:h-26"
             aria-pressed="false"
           >
-            <img
-              src="/realfilm.svg"
-              alt=""
-              class="w-8 h-8 md:w-12 md:h-12"
-            />
+            <img src="/dyr.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
             <span class="font-bold text-p text-center leading-tight">
-              Realfilm
+              Dyr
+            </span>
+          </button>
+
+          <button
+            type="button"
+            data-category-tile
+            class="cat-tile cat-eventyr w-20 h-20 md:w-26 md:h-26"
+            aria-pressed="false"
+          >
+            <img src="/eventyr.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+            <span class="font-bold text-p text-center leading-tight">
+              Eventyr
+            </span>
+          </button>
+
+          <button
+            type="button"
+            data-category-tile
+            class="cat-tile cat-sjov w-20 h-20 md:w-26 md:h-26"
+            aria-pressed="false"
+          >
+            <img src="/sjov.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+            <span class="font-bold text-p text-center leading-tight">
+              Sjov
+            </span>
+          </button>
+
+          <button
+            type="button"
+            data-category-tile
+            class="cat-tile cat-verden w-20 h-20 md:w-26 md:h-26"
+            aria-pressed="false"
+          >
+            <img src="/verden.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+            <span class="font-bold text-p text-center leading-tight">
+              Verden
             </span>
           </button>
         </section>
       </div>
 
-      <!-- TID -->
-      <div>
-        <h3 class="text-h4 mb-4">Tid</h3>
-        <section
-          aria-label="Tid"
-          class="flex flex-wrap gap-3 md:gap-5 justify-start"
-        >
-          <button
-            type="button"
-            data-category-tile
-            class="cat-tile cat-3-5 w-20 h-20 md:w-26 md:h-26"
-            aria-pressed="false"
+      <!-- ANIMATIONSSTIL + TID -->
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- ANIMATIONSSTIL -->
+        <div>
+          <h3 class="text-h4 mb-4">Animationsstil</h3>
+          <section
+            aria-label="Animationsstil"
+            class="flex flex-wrap gap-3 md:gap-4 justify-start"
           >
-            <img src="/3-5.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-            <span class="font-bold text-p text-center leading-tight">
-              3-5 min
-            </span>
-          </button>
+            <button
+              type="button"
+              data-category-tile
+              class="cat-tile cat-tegnet w-20 h-20 md:w-26 md:h-26"
+              aria-pressed="false"
+            >
+              <img src="/tegnet.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+              <span class="font-bold text-p text-center leading-tight">
+                Tegnet
+              </span>
+            </button>
 
-          <button
-            type="button"
-            data-category-tile
-            class="cat-tile cat-5-15 w-20 h-20 md:w-26 md:h-26"
-            aria-pressed="false"
-          >
-            <img src="/5-15.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-            <span class="font-bold text-p text-center leading-tight">
-              5-15 min
-            </span>
-          </button>
+            <button
+              type="button"
+              data-category-tile
+              class="cat-tile cat-stop w-20 h-20 md:w-26 md:h-26"
+              aria-pressed="false"
+            >
+              <img
+                src="/stopmotion.svg"
+                alt=""
+                class="w-8 h-8 md:w-12 md:h-12"
+              />
+              <span class="font-bold text-p text-center leading-tight">
+                Stop Motion
+              </span>
+            </button>
 
-          <button
-            type="button"
-            data-category-tile
-            class="cat-tile cat-20 w-20 h-20 md:w-26 md:h-26"
-            aria-pressed="false"
+            <button
+              type="button"
+              data-category-tile
+              class="cat-tile cat-realfilm w-20 h-20 md:w-26 md:h-26"
+              aria-pressed="false"
+            >
+              <img
+                src="/realfilm.svg"
+                alt=""
+                class="w-8 h-8 md:w-12 md:h-12"
+              />
+              <span class="font-bold text-p text-center leading-tight">
+                Realfilm
+              </span>
+            </button>
+          </section>
+        </div>
+
+        <!-- TID -->
+        <div>
+          <h3 class="text-h4 mb-4">Tid</h3>
+          <section
+            aria-label="Tid"
+            class="flex flex-wrap gap-3 md:gap-5 justify-start"
           >
-            <img src="/20.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
-            <span class="font-bold text-p text-center leading-tight">
-              20+ min
-            </span>
-          </button>
-        </section>
+            <button
+              type="button"
+              data-category-tile
+              class="cat-tile cat-3-5 w-20 h-20 md:w-26 md:h-26"
+              aria-pressed="false"
+            >
+              <img src="/3-5.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+              <span class="font-bold text-p text-center leading-tight">
+                3-5 min
+              </span>
+            </button>
+
+            <button
+              type="button"
+              data-category-tile
+              class="cat-tile cat-5-15 w-20 h-20 md:w-26 md:h-26"
+              aria-pressed="false"
+            >
+              <img src="/5-15.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+              <span class="font-bold text-p text-center leading-tight">
+                5-15 min
+              </span>
+            </button>
+
+            <button
+              type="button"
+              data-category-tile
+              class="cat-tile cat-20 w-20 h-20 md:w-26 md:h-26"
+              aria-pressed="false"
+            >
+              <img src="/20.svg" alt="" class="w-8 h-8 md:w-12 md:h-12" />
+              <span class="font-bold text-p text-center leading-tight">
+                20+ min
+              </span>
+            </button>
+          </section>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- FIND BUTTON -->
-  <div class="mt-8 flex justify-center">
-    <button
-      class="px-10 py-3 rounded-full bg-pink-100 text-neutral-900 font-bold shadow-md
-             hover:bg-pink-200 hover:-translate-y-0.5 hover:shadow-lg
-             transition transform duration-150
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-200"
-    >
-      FIND
-    </button>
-  </div>
-</section>
+    <!-- FIND BUTTON -->
+    <div class="mt-8 flex justify-center">
+      <button
+        class="px-10 py-3 rounded-full bg-pink-100 text-neutral-900 font-bold shadow-md
+               hover:bg-pink-200 hover:-translate-y-0.5 hover:shadow-lg
+               transition transform duration-150
+               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-200"
+      >
+        FIND
+      </button>
+    </div>
+  </section>
 
   <!-- ANBEFALET FILM – GRID -->
   <section class="section-space container">
     <h2 class="text-h2 mb-4 flex items-center gap-3">
-        Anbefalet
-        <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
-      </h2>
-  
+      Anbefalet
+      <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+    </h2>
+
     <!-- HORIZONTAL SCROLL CONTAINER -->
     <div class="overflow-x-auto scrollbar-hide">
       <div class="flex gap-6">
@@ -253,7 +253,7 @@ import FilmCard from "../components/FilmCard.astro";
           duration="10 min"
           href="/film/lillefinger"
         />
-  
+
         <FilmCard
           imageSrc="/dengraaulf1.webp"
           imageAlt="Den lille grå ulv"
@@ -262,7 +262,7 @@ import FilmCard from "../components/FilmCard.astro";
           duration="8 min"
           href="/SingleView"
         />
-  
+
         <FilmCard
           imageSrc="/dengraaulf2.webp"
           imageAlt="Den lille grå ulv"
@@ -271,7 +271,7 @@ import FilmCard from "../components/FilmCard.astro";
           duration="7 min"
           href="/SingleView"
         />
-  
+
         <FilmCard
           imageSrc="/lillefinger.webp"
           imageAlt="Lillefinger"
@@ -280,7 +280,7 @@ import FilmCard from "../components/FilmCard.astro";
           duration="10 min"
           href="/film/lillefinger"
         />
-  
+
         <FilmCard
           imageSrc="/dengraaulf1.webp"
           imageAlt="Den lille grå ulv"
@@ -289,7 +289,7 @@ import FilmCard from "../components/FilmCard.astro";
           duration="8 min"
           href="/film/den-lille-graa"
         />
-  
+
         <FilmCard
           imageSrc="/dengraaulf2.webp"
           imageAlt="Den lille grå ulv"
@@ -302,86 +302,84 @@ import FilmCard from "../components/FilmCard.astro";
     </div>
   </section>
 
-    <!-- ANBEFALET FILM – GRID -->
-    <section class="section-space container">
-        <h2 class="text-h2 mb-4 flex items-center gap-3">
-            Se Videre
-            <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
-          </h2>
+  <!-- ANBEFALET FILM – GRID -->
+  <section class="section-space container">
+    <h2 class="text-h2 mb-4 flex items-center gap-3">
+      Se Videre
+      <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+    </h2>
 
-        
-      
-        <!-- HORIZONTAL SCROLL CONTAINER -->
-        <div class="overflow-x-auto scrollbar-hide">
-          <div class="flex gap-6">
-            <FilmCard
-              imageSrc="/villeogvilde.webp"
-              imageAlt="villeogvilde"
-              title="Ville og Vilde Kanin"
-              subtitle="Hopper højt"
-              duration="10 min"
-              href="/ListView2"
-                variant="lime"
-                borderVariant="lime"
-            />
-      
-            <FilmCard
-              imageSrc="/dengraaulf1.webp"
-              imageAlt="Den lille grå ulv"
-              title="Den lille grå ulv"
-              subtitle="Vinter"
-              duration="8 min"
-              href="/film/den-lille-graa"
-              variant="lime"
-                borderVariant="lime"
-            />
-      
-            <FilmCard
-              imageSrc="/dengraaulf2.webp"
-              imageAlt="Den lille grå ulv"
-              title="Den lille grå ulv"
-              subtitle="Finder venskab"
-              duration="7 min"
-              href="/film/anden"
-              variant="lime"
-                borderVariant="lime"
-            />
-      
-            <FilmCard
-              imageSrc="/lillefinger.webp"
-              imageAlt="Lillefinger"
-              title="Lillefinger"
-              subtitle="Skysøvn"
-              duration="10 min"
-              href="/film/lillefinger"
-              variant="lime"
-                borderVariant="lime"
-            />
-      
-            <FilmCard
-              imageSrc="/dengraaulf1.webp"
-              imageAlt="Den lille grå ulv"
-              title="Den lille grå ulv"
-              subtitle="Vinter"
-              duration="8 min"
-              href="/film/den-lille-graa"
-              variant="lime"
-                borderVariant="lime"
-            />
-      
-            <FilmCard
-              imageSrc="/dengraaulf2.webp"
-              imageAlt="Den lille grå ulv"
-              title="Den lille grå ulv"
-              subtitle="Finder venskab"
-              duration="7 min"
-              href="/film/anden"
-              variant="lime"
-                borderVariant="lime"
-            />
-          </div>
-        </div>
-      </section>
+    <!-- HORIZONTAL SCROLL CONTAINER -->
+    <div class="overflow-x-auto scrollbar-hide">
+      <div class="flex gap-6">
+        <FilmCard
+          imageSrc="/villeogvilde.webp"
+          imageAlt="villeogvilde"
+          title="Ville og Vilde Kanin"
+          subtitle="Hopper højt"
+          duration="10 min"
+          href="/ListView2"
+          variant="lime"
+          borderVariant="lime"
+        />
+
+        <FilmCard
+          imageSrc="/dengraaulf1.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Vinter"
+          duration="8 min"
+          href="/film/den-lille-graa"
+          variant="lime"
+          borderVariant="lime"
+        />
+
+        <FilmCard
+          imageSrc="/dengraaulf2.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Finder venskab"
+          duration="7 min"
+          href="/film/anden"
+          variant="lime"
+          borderVariant="lime"
+        />
+
+        <FilmCard
+          imageSrc="/lillefinger.webp"
+          imageAlt="Lillefinger"
+          title="Lillefinger"
+          subtitle="Skysøvn"
+          duration="10 min"
+          href="/film/lillefinger"
+          variant="lime"
+          borderVariant="lime"
+        />
+
+        <FilmCard
+          imageSrc="/dengraaulf1.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Vinter"
+          duration="8 min"
+          href="/film/den-lille-graa"
+          variant="lime"
+          borderVariant="lime"
+        />
+
+        <FilmCard
+          imageSrc="/dengraaulf2.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Finder venskab"
+          duration="7 min"
+          href="/film/anden"
+          variant="lime"
+          borderVariant="lime"
+        />
+      </div>
+    </div>
+  </section>
 </MainLayout>
 
 <!-- CATEGORY TOGGLE SCRIPT -->
