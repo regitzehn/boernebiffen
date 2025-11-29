@@ -7,7 +7,7 @@ import FilmCard from "../components/FilmCard.astro";
 
 <MainLayout title="Listview">
   <!-- HERO / NY FILM -->
-  <section class="mb-6">
+  <section class="section-space container">
     <div class="relative">
       <img
         src="/lillefinger.webp"
@@ -31,7 +31,7 @@ import FilmCard from "../components/FilmCard.astro";
 
   <!-- KATEGORIER -->
   <section
-    class="mt-8 bg-lime-100 rounded-[32px] px-6 py-8 md:px-10 md:py-10"
+    class="section-space container bg-lime-100 rounded-[32px] px-6 py-8 md:px-10 md:py-10"
     aria-labelledby="kategori-heading"
   >
     <h2 id="kategori-heading" class="text-h2 mb-6">KATEGORI</h2>
@@ -222,8 +222,11 @@ import FilmCard from "../components/FilmCard.astro";
   </section>
 
   <!-- ANBEFALET FILM – GRID -->
-  <section class="mt-10">
-    <h2 class="text-h2 mb-4">Anbefalet</h2>
+  <section class="section-space container">
+    <h2 class="text-h2 mb-4 flex items-center gap-3">
+        Anbefalet
+        <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+      </h2>
   
     <!-- HORIZONTAL SCROLL CONTAINER -->
     <div class="overflow-x-auto scrollbar-hide">
@@ -286,8 +289,13 @@ import FilmCard from "../components/FilmCard.astro";
   </section>
 
     <!-- ANBEFALET FILM – GRID -->
-    <section class="mt-10">
-        <h2 class="text-h2 mb-4">Se Videre</h2>
+    <section class="section-space container">
+        <h2 class="text-h2 mb-4 flex items-center gap-3">
+            Se Videre
+            <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+          </h2>
+
+        
       
         <!-- HORIZONTAL SCROLL CONTAINER -->
         <div class="overflow-x-auto scrollbar-hide">
