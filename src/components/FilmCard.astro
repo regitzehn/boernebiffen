@@ -23,25 +23,21 @@ const {
 
 const bgClass = variant === "lime" ? "bg-lime-200" : "bg-blue-100";
 const borderClass = borderVariant === "lime" ? "border-lime-100" : "border-coolblue-200";
-
 ---
 
 <article class={`card ${bgClass} shadow-sm rounded-card w-[272px] flex-none`}>
   <!-- FIGURE / IMAGE -->
   <a href={href} class="relative block pt-4 px-4">
     <img
-    src={imageSrc}
-    alt={imageAlt}
-    class={`w-full h-40 md:h-48 rounded-card object-cover border-4 ${borderClass}`}
-  />
+      src={imageSrc}
+      alt={imageAlt}
+      class={`w-full h-40 md:h-48 rounded-card object-cover border-4 ${borderClass}`}
+    />
 
-    <!-- PLAY BUTTON (circle + your SVG) -->
+    <!-- PLAY BUTTON -->
     <div class="absolute bottom-4 right-7 z-10">
       <div class="relative w-16 h-16">
-        <!-- Pink circle -->
         <div class="absolute inset-0 rounded-full bg-pink-100"></div>
-
-        <!-- Your SVG on top -->
         <img
           src="/play.svg"
           alt="Play"
@@ -57,9 +53,7 @@ const borderClass = borderVariant === "lime" ? "border-lime-100" : "border-coolb
       {title}
     </h3>
 
-    {subtitle && (
-      <p class="text-p-card ">{subtitle}</p>
-    )}
+    {subtitle && <p class="text-p-card">{subtitle}</p>}
 
     <div class="mt-2 flex items-center gap-2 text-base text-neutral-900">
       <img src="/tid.svg" alt="" class="w-5 h-5" />

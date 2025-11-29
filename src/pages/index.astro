@@ -4,44 +4,37 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Forside" hideHeader={true} noMargin={true}>
   <article
-    class=" bg-lime-200 relative overflow-hidden px-4 md:px-10 grid grid-cols-1 auto-rows-auto md:grid-cols-10 md:grid-rows-7"
+    class="bg-lime-200 relative overflow-hidden px-4 md:px-10 grid grid-cols-1 auto-rows-auto md:grid-cols-10 md:grid-rows-7"
   >
-    <!-- LOGO + BUTTONS COLUMN (container) -->
+    <!-- LOGO + BUTTONS COLUMN -->
     <div
       class="mt-6 z-30 md:mt-0 md:col-start-2 md:col-span-3 md:row-start-1 md:row-span-3 md:self-end @container"
     >
-      <!-- LOGO (includes tagline) -->
+      <!-- LOGO -->
       <img
         src="/logo-bornebiffen.svg"
         alt="Børnebiffen"
         class="w-3/4 max-w-[260px] @md:w-full @md:max-w-[280px]"
       />
 
-      <!-- BUTTONS UNDER LOGO -->
+      <!-- BUTTONS -->
       <div class="mt-4 @md:mt-6">
         <div class="inline-grid grid-cols-[auto_auto] items-center">
-          <!-- Pink button -->
-          <button
-            class="
-              relative z-20
-              px-8 py-3
-              rounded-full bg-pink-100 text-white font-bold shadow-md
-            "
+          <!-- LOGIN BUTTON -->
+          <a
+            href="/ListView"
+            class="relative z-20 px-8 py-3 rounded-full bg-pink-100 text-white font-bold shadow-md inline-block"
           >
             Logind
-          </button>
+          </a>
 
-          <!-- White button slightly underneath the pink one -->
-          <button
-            class="
-              relative z-10
-              -ml-9
-              px-8 pl-12 py-3
-              rounded-full bg-neutral-50 text-neutral-900 font-bold shadow-md
-            "
+          <!-- OPRET BUTTON -->
+          <a
+            href="/ListView"
+            class="relative z-10 -ml-9 px-8 pl-12 py-3 rounded-full bg-neutral-50 text-neutral-900 font-bold shadow-md inline-block"
           >
             Opret
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -60,7 +53,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       ></lottie-player>
     </div>
 
-    <!-- SMALL PINK LOTTIE – hidden on mobile -->
+    <!-- SMALL PINK LOTTIE -->
     <div
       class="hidden md:flex md:items-end md:z-30 md:col-start-5 md:col-span-2 md:row-start-5 md:row-span-3"
     >
