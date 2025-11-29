@@ -1,0 +1,120 @@
+---
+interface Props {
+  imageSrc: string;
+  imageAlt?: string;
+  title: string;
+  subtitle?: string;
+  duration?: string;
+  href?: string;
+  variant?: "blue" | "lime";
+  borderVariant?: "blue" | "lime";
+  description?: string;
+}
+
+const {
+  imageSrc,
+  imageAlt = "",
+  title,
+  subtitle,
+  duration = "10 min",
+  variant = "blue",
+  borderVariant = "blue",
+  description,
+} = Astro.props as Props;
+
+const bgClass = variant === "lime" ? "bg-lime-200" : "bg-blue-100";
+const borderClass =
+  borderVariant === "lime" ? "border-lime-100" : "border-coolblue-200";
+---
+
+<article
+  class={`card ${bgClass} rounded-card shadow-sm w-full max-w-[900px] mx-auto`}
+>
+  <!-- IMAGE + PLAY BUTTON -->
+  <div class="relative pt-6 px-6">
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      class={`w-full h-[300px] md:h-[480px] rounded-card object-cover border-8 ${borderClass}`}
+    />
+
+    <!-- PLAY BUTTON -->
+    <div class="absolute bottom-6 right-10 z-10">
+      <div class="relative w-20 h-20">
+        <div class="absolute inset-0 rounded-full bg-pink-100"></div>
+        <img
+          src="/play.svg"
+          alt="Play"
+          class="absolute inset-0 w-12 h-12 m-auto pl-2"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="px-6 pb-6 pt-4 flex flex-col gap-3">
+    <h1 class="text-h1 leading-tight">{title}</h1>
+
+    {subtitle && <p class="text-h4 italic">{subtitle}</p>}
+
+    <div class="mt-1 flex items-center gap-2 text-p">
+      <img src="/tid.svg" alt="" class="w-10 h-10" />
+      <span>{duration}</span>
+    </div>
+
+    <!-- EXPANDABLE DESCRIPTION -->
+    {description && (
+      <div class="mt-4">
+        <button
+          type="button"
+          class="text-p flex items-center gap-2"
+          data-readmore-toggle
+        >
+          <span data-readmore-label>LÆS MERE</span>
+
+          <!-- Your arrow icon -->
+          <img
+            src="/pil-ned.svg"
+            alt=""
+            class="w-5 h-5"
+            aria-hidden="true"
+            data-readmore-icon
+          />
+        </button>
+
+        <div
+          class="mt-2 text-p max-w-prose hidden"
+          data-readmore-content
+        >
+          {description}
+        </div>
+      </div>
+    )}
+
+    <!-- EXTRA SLOT CONTENT -->
+    <slot />
+  </div>
+</article>
+
+<script is:inline>
+  if (typeof document !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector("[data-readmore-toggle]");
+      const content = document.querySelector("[data-readmore-content]");
+      const label = document.querySelector("[data-readmore-label]");
+      const icon = document.querySelector("[data-readmore-icon]");
+
+      if (!toggle || !content || !label || !icon) return;
+
+      toggle.addEventListener("click", () => {
+        const nowHidden = content.classList.toggle("hidden");
+
+        // Update label text
+        label.textContent = nowHidden ? "LÆS MERE" : "LÆS MINDRE";
+
+        // Swap arrow icon
+        icon.setAttribute("src", nowHidden ? "/pil-ned.svg" : "/pil-op.svg");
+      });
+    });
+  }
+</script>

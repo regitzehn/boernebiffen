@@ -65,11 +65,19 @@
   --font-weight-black: 900;
 
   /* TYPOGRAPHY TOKENS */
+  --font-h1-m: 36px;
   --font-h1: 44px;
+
+  --font-h2-m: 32px;
   --font-h2: 40px;
+
+  --font-h3-m: 28px;
   --font-h3: 36px;
+
+  --font-h4-m: 24px;
   --font-h4: 36px;
-  --font-footer: 24px;
+
+  --font-p-m: 18px;
   --font-p-desktop: 24px;
 
   /* CARD TYPOGRAPHY */
@@ -99,7 +107,6 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    /* Optional: tweak or remove */
     border-color: var(--color-neutral-50, currentColor);
   }
 }
@@ -112,15 +119,17 @@
   .rounded-pill {
     border-radius: var(--radius-full);
   }
+
   .icon-circle {
     @apply inline-flex items-center justify-center
-           w-10 h-10 md:w-14 md:h-14 
+           w-10 h-10 md:w-14 md:h-14
            bg-lime-300 rounded-full shadow-md
            hover:brightness-105
            focus-visible:outline-none
            focus-visible:ring-2 focus-visible:ring-pink-200
            transition;
   }
+
   .cat-tile {
     @apply flex flex-col items-center justify-center gap-2
            w-26 h-26 md:w-26 md:h-26
@@ -217,59 +226,77 @@
 }
 
 @layer utilities {
-  /* Headings */
+  /* ---------------- TYPOGRAPHY ---------------- */
+
   .text-h1 {
-    font-size: var(--font-h1);
     font-family: var(--font-display);
     font-weight: 900;
+    font-size: var(--font-h1-m); /* mobile */
   }
 
   .text-h2 {
-    font-size: var(--font-h2);
     font-family: var(--font-display);
     font-weight: 900;
+    font-size: var(--font-h2-m);
   }
 
   .text-h3 {
-    font-size: var(--font-h3);
     font-family: var(--font-display);
     font-weight: 900;
+    font-size: var(--font-h3-m);
   }
 
   .text-h4 {
-    font-size: var(--font-h4);
     font-family: var(--font-display);
     font-weight: 700;
+    font-size: var(--font-h4-m);
   }
 
   .text-h-card {
-    font-size: var(--font-h-card);
     font-family: var(--font-display);
     font-weight: 900;
+    font-size: var(--font-h-card);
   }
 
-  /* Card paragraph */
   .text-p-card {
-    font-size: var(--font-p-card);
     font-family: var(--font-display);
     font-weight: 400;
+    font-size: var(--font-p-card);
   }
 
-  /* Footer text */
   .text-footer {
-    font-size: var(--font-footer);
     font-family: var(--font-display);
     font-weight: 900;
+    font-size: 24px; /* could be a token later */
   }
 
-  /* Paragraph */
-  .text-p-desktop {
-    font-size: var(--font-p-desktop);
+  .text-p {
     font-family: var(--font-display);
     font-weight: 500;
+    font-size: var(--font-p-m);
   }
 
-  /* Section spacing utilities */
+  /* Desktop overrides for typography */
+  @media (min-width: 768px) {
+    .text-h1 {
+      font-size: var(--font-h1);
+    }
+    .text-h2 {
+      font-size: var(--font-h2);
+    }
+    .text-h3 {
+      font-size: var(--font-h3);
+    }
+    .text-h4 {
+      font-size: var(--font-h4);
+    }
+    .text-p {
+      font-size: var(--font-p-desktop);
+    }
+  }
+
+  /* ---------------- SECTION SPACING ---------------- */
+
   .section-space {
     margin-bottom: var(--spacing-section);
   }
@@ -280,7 +307,8 @@
     }
   }
 
-  /* Layout container */
+  /* ---------------- LAYOUT CONTAINERS ---------------- */
+
   .container {
     width: 100%;
     margin-left: auto;
@@ -289,18 +317,17 @@
     padding-right: 1rem;
     max-width: 1280px;
   }
-  /* Layout container */
+
   .container2 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
     max-width: 1280px;
   }
+
+  /* ---------------- SCROLL HELPERS ---------------- */
 
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE + Edge */
