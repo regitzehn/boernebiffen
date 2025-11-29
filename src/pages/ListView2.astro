@@ -1,0 +1,193 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import FilmCard from "../components/FilmCard.astro";
+---
+
+<MainLayout title="Listevisning 2">
+    <section
+    class="section-space container2 bg-lime-100 rounded-[32px] "
+  >
+  <div class="absolute top-28 right-30 w-30 h-30 md:top-26 md:right-60 md:w-40 md:h-40 pointer-events-none">
+    <lottie-player
+      src="/herobunny.json"
+      background="transparent"
+      speed="1"
+      autoplay
+      loop
+    ></lottie-player>
+  </div>
+
+  <h1 class="text-h1">Ville og Vilde Kanin</h1>
+  <h4 class="text-h4 pb-8">4 sæsoner</h4>
+  <p class="text-p-desktop max-w-prose">Ville er en lille hvid kanin, der bor i et bur på en bondegård, hvor han har det godt og trygt. Men en dag er buret ikke blevet låst, og Ville falder ud. Skal han kravle op igen, eller skal han hellere hoppe ud og se, hvordan der er ude i skoven?</p>
+
+  </section>
+
+      <!-- ANBEFALET FILM – GRID -->
+      <section class="section-space container">
+        <h2 class="text-h2 mb-4 flex items-center gap-3">
+            Sæson 1
+            <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+          </h2>
+
+        
+      
+        <!-- HORIZONTAL SCROLL CONTAINER -->
+        <div class="overflow-x-auto scrollbar-hide">
+          <div class="flex gap-6">
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space container">
+        <h2 class="text-h2 mb-4 flex items-center gap-3">
+            Sæson 2
+            <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+          </h2>
+
+        
+      
+        <!-- HORIZONTAL SCROLL CONTAINER -->
+        <div class="overflow-x-auto scrollbar-hide">
+          <div class="flex gap-6">
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+      
+            <FilmCard
+              imageSrc="/villeogvilde.webp"
+              imageAlt="villeogvilde"
+              title="Ville og Vilde Kanin"
+              subtitle="Skysøvn"
+              duration="10 min"
+              href="/film/lillefinger"
+                variant="lime"
+                borderVariant="lime"
+            />
+          </div>
+        </div>
+      </section>
+
+      
+</MainLayout>
+  
+<script
+  src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+  is:inline
+></script>
