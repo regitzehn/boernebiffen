@@ -1,0 +1,91 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import FilmCardSingle from "../components/FilmCardSingle.astro";
+import FilmCard from "../components/FilmCard.astro";
+---
+
+<MainLayout title="SingleView">
+  <section class="section-space container mt-16">
+    <FilmCardSingle
+      imageSrc="/dengraaulf1.webp"
+      imageAlt="Ville og Vilde Kanin"
+      title="Ville og Vilde Kanin"
+      subtitle="4 sæsoner"
+      duration="10 min"
+      variant="blue"
+      borderVariant="blue"
+      description="Ville er en lille hvid kanin, der bor i et bur på en bondegård, hvor han har det godt og trygt. Men en dag er buret ikke blevet låst, og Ville falder ud. Skal han kravle op igen, eller skal han hellere hoppe ud og se, hvordan der er ude i skoven?"
+    >
+      <!-- Slot content here if you want -->
+    </FilmCardSingle>
+  </section>
+
+
+  <!-- ANBEFALET FILM – GRID -->
+  <section class="section-space container">
+    <h2 class="text-h2 mb-4 flex items-center gap-3">
+      Serien: Den lille grå ulv
+        <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+      </h2>
+  
+    <!-- HORIZONTAL SCROLL CONTAINER -->
+    <div class="overflow-x-auto scrollbar-hide">
+      <div class="flex gap-6">
+        <FilmCard
+          imageSrc="/dengraaulf2.webp"
+          imageAlt="Den går grå ulv"
+          title="Den grå ulv"
+          subtitle="Finder venskab"
+          duration="10 min"
+          href="/film/lillefinger"
+        />
+  
+        <FilmCard
+          imageSrc="/dengraaulf1.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Vinter"
+          duration="8 min"
+          href="/film/den-lille-graa"
+        />
+  
+        <FilmCard
+          imageSrc="/dengraaulf2.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Finder venskab"
+          duration="7 min"
+          href="/film/anden"
+        />
+  
+        <FilmCard
+          imageSrc="/dengraaulf3.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Flyver højt"
+          duration="10 min"
+          href="/film/lillefinger"
+        />
+  
+        <FilmCard
+          imageSrc="/dengraaulf1.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Vinter"
+          duration="8 min"
+          href="/film/den-lille-graa"
+        />
+  
+        <FilmCard
+          imageSrc="/dengraaulf2.webp"
+          imageAlt="Den lille grå ulv"
+          title="Den lille grå ulv"
+          subtitle="Finder venskab"
+          duration="7 min"
+          href="/film/anden"
+        />
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
