@@ -81,6 +81,10 @@
   --radius-md: 8px; /* medium */
   --radius-lg: 10px; /* big rounded cards */
   --radius-full: 999px; /* pills & circles */
+
+  /* SPACING TOKENS */
+  --spacing-section: 2rem; /* ~32px */
+  --spacing-section-lg: 3rem; /* ~48px */
 }
 
 @layer base {
@@ -263,6 +267,27 @@
     font-size: var(--font-p-desktop);
     font-family: var(--font-display);
     font-weight: 500;
+  }
+
+  /* Section spacing utilities */
+  .section-space {
+    margin-bottom: var(--spacing-section);
+  }
+
+  @media (min-width: 768px) {
+    .section-space {
+      margin-bottom: var(--spacing-section-lg);
+    }
+  }
+
+  /* Layout container */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1280px;
   }
 
   .scrollbar-hide {
