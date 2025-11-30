@@ -1,4 +1,5 @@
 ---
+import Kategorier from './Kategorier.astro';
 interface Props {
   imageSrc: string;
   imageAlt?: string;
@@ -22,9 +23,9 @@ const {
   description,
 } = Astro.props as Props;
 
-const bgClass = variant === "lime" ? "bg-lime-200" : "bg-blue-100";
+const bgClass = variant === "lime" ? "bg-lime-200" : "bg-coolblue-200";
 const borderClass =
-  borderVariant === "lime" ? "border-lime-100" : "border-coolblue-200";
+  borderVariant === "lime" ? "border-lime-100" : "border-coolblue-100";
 ---
 
 <article
@@ -56,8 +57,14 @@ const borderClass =
     <h1 class="text-h1 leading-tight">{title}</h1>
 
     {subtitle && <p class="text-h4 italic">{subtitle}</p>}
+    <div class="mt-1 flex items-center gap-2 text-p">
+      <Kategorier label="Dyr"      iconSrc="/dyr.svg"      variant="dyr" />
+      <Kategorier label="Eventyr"  iconSrc="/eventyr.svg"  variant="eventyr" />
+    </div>
+    
 
     <div class="mt-1 flex items-center gap-2 text-p">
+      
       <img src="/tid.svg" alt="" class="w-10 h-10" />
       <span>{duration}</span>
     </div>

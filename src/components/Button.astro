@@ -1,0 +1,55 @@
+---
+interface Props {
+  // MODE
+  type?: "double" | "single";
+
+  // Double button labels + links
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+
+  // Single button label + link
+  singleLabel?: string;
+  singleHref?: string;
+}
+
+const {
+  type = "double",
+  primaryLabel,
+  primaryHref,
+  secondaryLabel,
+  secondaryHref,
+  singleLabel,
+  singleHref,
+} = Astro.props;
+---
+
+<!-- SINGLE PINK BUTTON -->
+{type === "single" && singleLabel && singleHref && (
+  <a
+    href={singleHref}
+    class="px-8 py-3 rounded-full bg-pink-100 text-white font-bold shadow-md inline-block hover:brightness-110 transition"
+  >
+    {singleLabel}
+  </a>
+)}
+
+<!-- DOUBLE OVERLAPPING BUTTONS -->
+{type === "double" && (
+  <div class="inline-grid grid-cols-[auto_auto] items-center">
+    <a
+      href={primaryHref}
+      class="relative z-20 px-8 py-3 rounded-full bg-pink-100 text-white font-bold shadow-md inline-block hover:brightness-110 transition"
+    >
+      {primaryLabel}
+    </a>
+
+    <a
+      href={secondaryHref}
+      class="relative z-10 -ml-9 px-8 pl-12 py-3 rounded-full bg-neutral-50 text-neutral-900 font-bold shadow-md inline-block hover:brightness-95 transition"
+    >
+      {secondaryLabel}
+    </a>
+  </div>
+)}

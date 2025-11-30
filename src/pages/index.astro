@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Forside" hideHeader={true} noMargin={true}>
@@ -20,21 +21,13 @@ import MainLayout from "../layouts/MainLayout.astro";
       <!-- BUTTONS -->
       <div class="mt-4 @md:mt-6">
         <div class="inline-grid grid-cols-[auto_auto] items-center">
-          <!-- LOGIN BUTTON -->
-          <a
-            href="/listview"
-            class="relative z-20 px-8 py-3 rounded-full bg-pink-100 text-white font-bold shadow-md inline-block"
-          >
-            Logind
-          </a>
-
-          <!-- OPRET BUTTON -->
-          <a
-            href="/listview"
-            class="relative z-10 -ml-9 px-8 pl-12 py-3 rounded-full bg-neutral-50 text-neutral-900 font-bold shadow-md inline-block"
-          >
-            Opret
-          </a>
+          <Button
+            type="double"
+            primaryLabel="Logind"
+            primaryHref="/ListView"
+            secondaryLabel="Opret"
+            secondaryHref="/ListView"
+          />
         </div>
       </div>
     </div>

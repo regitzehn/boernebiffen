@@ -1,0 +1,43 @@
+---
+interface Props {
+  label: string;
+  iconSrc: string;
+  variant:
+    | "alle"
+    | "venskab"
+    | "verden"
+    | "eventyr"
+    | "sjov"
+    | "dyr";
+}
+
+const { label, iconSrc, variant } = Astro.props;
+
+// base pill styles (no cursor / no hover lift)
+const base =
+  "inline-flex items-center gap-3 px-6 py-3 rounded-pill shadow-md";
+
+// Color mapping (just one color per pill)
+const bgColors = {
+  alle: "bg-green-100",
+  venskab: "bg-pink-200",
+  verden: "bg-violet-100",
+  eventyr: "bg-yellow-100",
+  sjov: "bg-orange-100",
+  dyr: "bg-blue-100",
+};
+
+const classes = `${base} ${bgColors[variant]}`;
+---
+
+<div class={classes}>
+  <img
+    src={iconSrc}
+    alt=""
+    class="w-7 h-7 md:w-9 md:h-9"
+  />
+
+  <span class="font-bold text-p text-neutral-900">
+    {label}
+  </span>
+</div>

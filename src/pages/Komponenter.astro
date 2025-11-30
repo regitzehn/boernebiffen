@@ -4,10 +4,30 @@ import FilmCard from "../components/FilmCard.astro";
 import FilmCardSingle from "../components/FilmCardSingle.astro";
 import Kategorier from "../components/Kategorier.astro";
 import PlayButton from "../components/PlayButton.astro";
+import Button from "../components/Button.astro";
 ---
 <MainLayout title="Komponentbibliotek">
     <main class="container mx-auto p-4 space-y-8">
         <h1 class="text-h1">Komponentbibliotek</h1>
+
+        <section>
+            <h2 class="text-h2 mb-4">Button</h2>
+            <div class="flex items-center gap-6">
+                <Button
+                    type="double"
+                    primaryLabel="Logind"
+                    primaryHref="/ListView"
+                    secondaryLabel="Opret"
+                    secondaryHref="/ListView"
+                />
+
+                <Button
+                    type="single"
+                    singleLabel="FIND"
+                    singleHref="/ListView2"
+                />
+            </div>
+        </section>
 
         <section>
             <h2 class="text-h2 mb-4">Play Button</h2>
@@ -32,23 +52,30 @@ import PlayButton from "../components/PlayButton.astro";
             </div>
         </section>
 
-<section>
-  <h2 class="text-h2 mb-4">FilmCard til singleview</h2>
-  <div class="max-w-xl">
-    <FilmCardSingle
-      imageSrc="/dengraaulf1.webp"
-      imageAlt="Den lille grå ulv"
-      title="Den lille grå ulv"
-      duration="8 min"
-      description="Kort beskrivelse af filmen vist i komponentbiblioteket."
-      href="/SingleView/den-lille-graa"
-    />
-  </div>
-</section>
+        <section>
+            <h2 class="text-h2 mb-4">FilmCard til singleview</h2>
+            <div class="max-w-xl">
+                <FilmCardSingle
+                    imageSrc="/dengraaulf1.webp"
+                    imageAlt="Den lille grå ulv"
+                    title="Den lille grå ulv"
+                    subtitle="Frosten"
+                    duration="8 min"
+                    description="Kort beskrivelse af filmen vist i komponentbiblioteket."
+                    href="/SingleView/den-lille-graa"
+                />
+            </div>
+        </section>
 
         <section>
             <h2 class="text-h2 mb-4">Kategorier</h2>
-            <Kategorier />
+            <section class="section-space container flex flex-wrap gap-4">
+                <Kategorier label="Venskab" iconSrc="/venskab.svg" variant="venskab" />
+                <Kategorier label="Verden" iconSrc="/verden.svg" variant="verden" />
+                <Kategorier label="Eventyr" iconSrc="/eventyr.svg" variant="eventyr" />
+                <Kategorier label="Sjov" iconSrc="/sjov.svg" variant="sjov" />
+                <Kategorier label="Dyr" iconSrc="/dyr.svg" variant="dyr" />
+            </section>
         </section>
     </main>
 </MainLayout>

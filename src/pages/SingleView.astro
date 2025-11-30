@@ -20,13 +20,24 @@ import FilmCard from "../components/FilmCard.astro";
     </FilmCardSingle>
   </section>
 
+  <img
+    src="/purplewand.svg"
+    class="hidden md:block pointer-events-none select-none 
+      absolute -right-4 top-130 w-50"
+  />
+
+  <img
+    src="/pinkwand.svg"
+    class="hidden md:block pointer-events-none select-none
+      absolute -left-6 top-80 w-50 z-10"
+  />
 
   <!-- ANBEFALET FILM – GRID -->
   <section class="section-space container">
     <h2 class="text-h2 mb-4 flex items-center gap-3">
       Serien: Den lille grå ulv
-        <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
-      </h2>
+      <img src="/arrowleft.svg" alt="" class="w-8 h-8" />
+    </h2>
   
     <!-- HORIZONTAL SCROLL CONTAINER -->
     <div class="overflow-x-auto scrollbar-hide">
@@ -87,5 +98,4 @@ import FilmCard from "../components/FilmCard.astro";
       </div>
     </div>
   </section>
-
 </MainLayout>

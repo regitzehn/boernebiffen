@@ -1,13 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Kategorier from "../components/Kategorier.astro"; // (you may or may not use this)
 import PlayButton from "../components/PlayButton.astro";
 import FilmCard from "../components/FilmCard.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Listview">
   <!-- HERO / NY FILM -->
   <section class="section-space container">
+    <h1 class="text-h1 mb-6">Ny film</h1>
     <div class="relative">
       <img
         src="/lillefinger.webp"
@@ -28,6 +29,18 @@ import FilmCard from "../components/FilmCard.astro";
       </div>
     </div>
   </section>
+
+  <img
+    src="/purplewand.svg"
+    class="hidden md:block pointer-events-none select-none 
+           absolute right-0 top-130 w-40"
+  />
+
+  <img
+    src="/pinkwand.svg"
+    class="hidden md:block pointer-events-none select-none
+           absolute -left-3 top-80 w-50 z-10"
+  />
 
   <!-- KATEGORIER -->
   <section
@@ -224,14 +237,11 @@ import FilmCard from "../components/FilmCard.astro";
 
     <!-- FIND BUTTON -->
     <div class="mt-8 flex justify-center">
-      <button
-        class="px-10 py-3 rounded-full bg-pink-100 text-neutral-900 font-bold shadow-md
-               hover:bg-pink-200 hover:-translate-y-0.5 hover:shadow-lg
-               transition transform duration-150
-               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-200"
-      >
-        FIND
-      </button>
+      <Button
+        type="single"
+        singleLabel="FIND"
+        singleHref="/ListView2"
+      />
     </div>
   </section>
 
@@ -251,7 +261,7 @@ import FilmCard from "../components/FilmCard.astro";
           title="Lillefinger"
           subtitle="Skysøvn"
           duration="10 min"
-          href="/film/lillefinger"
+          href="/SingleView"
         />
 
         <FilmCard
@@ -260,7 +270,7 @@ import FilmCard from "../components/FilmCard.astro";
           title="Den lille grå ulv"
           subtitle="Vinter"
           duration="8 min"
-          href="/singleview"
+          href="/SingleView"
         />
 
         <FilmCard
@@ -269,7 +279,7 @@ import FilmCard from "../components/FilmCard.astro";
           title="Den lille grå ulv"
           subtitle="Finder venskab"
           duration="7 min"
-          href="/singleview"
+          href="/SingleView"
         />
 
         <FilmCard
@@ -302,6 +312,12 @@ import FilmCard from "../components/FilmCard.astro";
     </div>
   </section>
 
+  <img
+    src="/pinkwand.svg"
+    class="hidden md:block pointer-events-none select-none
+           absolute left-0 top-500 w-40 z-10"
+  />
+
   <!-- ANBEFALET FILM – GRID -->
   <section class="section-space container">
     <h2 class="text-h2 mb-4 flex items-center gap-3">
@@ -318,7 +334,7 @@ import FilmCard from "../components/FilmCard.astro";
           title="Ville og Vilde Kanin"
           subtitle="Hopper højt"
           duration="10 min"
-          href="/listview2"
+          href="/ListView2"
           variant="lime"
           borderVariant="lime"
         />
@@ -329,7 +345,7 @@ import FilmCard from "../components/FilmCard.astro";
           title="Den lille grå ulv"
           subtitle="Vinter"
           duration="8 min"
-          href="/film/den-lille-graa"
+          href="ListView2"
           variant="lime"
           borderVariant="lime"
         />
