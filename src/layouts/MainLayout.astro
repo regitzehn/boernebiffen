@@ -1,40 +1,117 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import '../styles/tailwind.css';
+import "../styles/tailwind.css";
 
 const { title, hideHeader = false, noMargin = false } = Astro.props;
-
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://use.typekit.net/awg5yct.css">
-		<title>{Astro.props.title}</title>
-		<script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://use.typekit.net/awg5yct.css" />
+    <title>{title}</title>
+    <script
+      defer
+      src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
+    ></script>
+  </head>
 
-		{ !hideHeader && (
-			<header>
-				<Header />
-			</header>
-		)}
+  <body class="min-h-screen bg-neutral-50">
+    {/* 🔒 FULLSCREEN PASSWORD OVERLAY */}
+    <div
+      id="access-overlay"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black"
+    >
+      <div class="bg-neutral-50 rounded-card shadow-lg p-6 w-full max-w-md mx-4">
+        <h1 class="text-h2 mb-3">Adgang beskyttet</h1>
+        <p class="text-p mb-4">
+          Dette er et uopfordret redesign af Børnebiffen.dk.
+          Indtast adgangskoden for at se prototypen.
+        </p>
 
-		  <main class={noMargin ? "" : "ml-4 mr-4 md:ml-40 md:mr-40"}>
-            <slot />
-        </main>
+        <form
+          class="space-y-4"
+          onsubmit="event.preventDefault(); handleAccessLogin();"
+        >
+          <div>
+            <label for="pw" class="block text-p mb-1">
+              Adgangskode
+            </label>
+            <input
+              id="pw"
+              type="password"
+              required
+              class="w-full rounded-card border border-blue-200 px-3 py-2"
+            />
+          </div>
 
-		<footer>
-			<Footer />
-		</footer>
+          <button
+            type="submit"
+            class="mt-2 px-8 py-3 rounded-full bg-pink-100 text-white font-bold shadow-md"
+          >
+            Giv adgang
+          </button>
+        </form>
 
-	</body>
+        <p class="text-p mt-3 text-sm">
+          (Adgangskoden er "kode")
+        </p>
+      </div>
+    </div>
+
+    {/* HEADER */}
+    {!hideHeader && (
+      <header>
+        <Header />
+      </header>
+    )}
+
+    {/* MAIN CONTENT */}
+    <main class={noMargin ? "" : "ml-4 mr-4 md:ml-40 md:mr-40"}>
+      <slot />
+    </main>
+
+    {/* FOOTER */}
+    <footer>
+      <Footer />
+    </footer>
+
+    {/* 🔧 PASSWORD LOGIC + LOTTIE IMPORT */}
+    <script is:inline>
+      const PASSWORD = "kode"; // ← vælg jeres kode her
+
+      function handleAccessLogin() {
+        const input = document.getElementById("pw");
+        const value = input && input.value;
+        const overlay = document.getElementById("access-overlay");
+
+        if (!overlay) return;
+
+        if (value === PASSWORD) {
+          // husk adgang i denne browser-session
+          sessionStorage.setItem("bb-access", "ok");
+          overlay.style.display = "none";
+        } else {
+          alert("Forkert adgangskode");
+        }
+      }
+
+      (function () {
+        if (typeof window === "undefined") return;
+        const overlay = document.getElementById("access-overlay");
+        const hasAccess = sessionStorage.getItem("bb-access") === "ok";
+        if (hasAccess && overlay) {
+          overlay.style.display = "none";
+        }
+      })();
+    </script>
+
+    <script type="module">
+      import "@lottiefiles/lottie-player";
+    </script>
+  </body>
 </html>
-
-<script type="module">
-	import '@lottiefiles/lottie-player';
-</script>
